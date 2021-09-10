@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Trident_HMI2", "Trident_HMI2\Trident_HMI2.vbproj", "{CC78D715-DD43-4F96-A692-6906B18B9F55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC78D715-DD43-4F96-A692-6906B18B9F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC78D715-DD43-4F96-A692-6906B18B9F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC78D715-DD43-4F96-A692-6906B18B9F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC78D715-DD43-4F96-A692-6906B18B9F55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E56E7C9-459C-4E3F-9E5D-35D5A4E5BA9C}
+	EndGlobalSection
+EndGlobal
