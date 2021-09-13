@@ -68,7 +68,7 @@
         Dim MeasureReal29 As Decimal
         Dim MeasureReal30 As Decimal
 
-        Dim measureWord1 As UInt16
+        Dim measureWord1 As strPhotocells
         Dim measureWord2 As UInt16
         Dim measureWord3 As UInt16
         Dim measureWord4 As UInt16
@@ -103,6 +103,81 @@
     End Structure
 
 
+    Structure strPhotocells
+        Dim ph01 As Boolean
+        Dim ph02 As Boolean
+        Dim ph03 As Boolean
+        Dim ph04 As Boolean
+        Dim ph05 As Boolean
+        Dim ph06 As Boolean
+        Dim ph07 As Boolean
+        Dim ph08 As Boolean
+        Dim ph09 As Boolean
+        Dim ph10 As Boolean
+        Dim ph11 As Boolean
+        Dim ph12 As Boolean
+        Dim Spare13 As Boolean
+        Dim Spare14 As Boolean
+        Dim Spare15 As Boolean
+        Dim Spare16 As Boolean
+        Dim Spare17 As Boolean
+        Dim Spare18 As Boolean
+        Dim Spare19 As Boolean
+        Dim Spare20 As Boolean
+        Dim Spare21 As Boolean
+        Dim Spare22 As Boolean
+        Dim Spare23 As Boolean
+        Dim Spare24 As Boolean
+        Dim Spare25 As Boolean
+        Dim Spare26 As Boolean
+        Dim Spare27 As Boolean
+        Dim Spare28 As Boolean
+        Dim Spare29 As Boolean
+        Dim Spare30 As Boolean
+        Dim Spare31 As Boolean
+        Dim Spare32 As Boolean
+    End Structure
+
+
+    Public Function intToStrPhotocells(ByVal number As UInt16) As strPhotocells
+
+        Dim retVal As strPhotocells
+
+        retVal.ph01 = number And 1
+        retVal.ph02 = number And 2
+        retVal.ph03 = number And 4
+        retVal.ph04 = number And 8
+        retVal.ph05 = number And 16
+        retVal.ph06 = number And 32
+        retVal.ph07 = number And 64
+        retVal.ph08 = number And 128
+        retVal.ph09 = number And 256
+        retVal.ph10 = number And 512
+        retVal.ph11 = number And 1024
+        retVal.ph12 = number And 2048
+        retVal.Spare13 = 0
+        retVal.Spare14 = 0
+        retVal.Spare15 = 0
+        retVal.Spare16 = 0
+        retVal.Spare17 = 0
+        retVal.Spare18 = 0
+        retVal.Spare19 = 0
+        retVal.Spare20 = 0
+        retVal.Spare21 = 0
+        retVal.Spare22 = 0
+        retVal.Spare23 = 0
+        retVal.Spare24 = 0
+        retVal.Spare25 = 0
+        retVal.Spare26 = 0
+        retVal.Spare27 = 0
+        retVal.Spare28 = 0
+        retVal.Spare29 = 0
+        retVal.Spare30 = 0
+        retVal.Spare31 = 0
+        retVal.Spare32 = 0
+
+        Return retVal
+    End Function
 
 
 End Module

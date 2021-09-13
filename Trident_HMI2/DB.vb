@@ -48,36 +48,6 @@ Public Class DB
                                           "  `plc_data`.`intval28`," &
                                           "  `plc_data`.`intval29`," &
                                           "  `plc_data`.`intval30`," &
-                                          "  `plc_data`.`word1`," &
-                                          "  `plc_data`.`word2`," &
-                                          "  `plc_data`.`word3`," &
-                                          "  `plc_data`.`word4`," &
-                                          "  `plc_data`.`word5`," &
-                                          "  `plc_data`.`word6`," &
-                                          "  `plc_data`.`word7`," &
-                                          "  `plc_data`.`word8`," &
-                                          "  `plc_data`.`word9`," &
-                                          "  `plc_data`.`word10`," &
-                                          "  `plc_data`.`word11`," &
-                                          "  `plc_data`.`word12`," &
-                                          "  `plc_data`.`word13`," &
-                                          "  `plc_data`.`word14`," &
-                                          "  `plc_data`.`word15`," &
-                                          "  `plc_data`.`word16`," &
-                                          "  `plc_data`.`word17`," &
-                                          "  `plc_data`.`word18`," &
-                                          "  `plc_data`.`word19`," &
-                                          "  `plc_data`.`word20`," &
-                                          "  `plc_data`.`word21`," &
-                                          "  `plc_data`.`word22`," &
-                                          "  `plc_data`.`word23`," &
-                                          "  `plc_data`.`word24`," &
-                                          "  `plc_data`.`word25`," &
-                                          "  `plc_data`.`word26`," &
-                                          "  `plc_data`.`word27`," &
-                                          "  `plc_data`.`word28`," &
-                                          "  `plc_data`.`word29`," &
-                                          "  `plc_data`.`word30`," &
                                           "  `plc_data`.`real1`," &
                                           "  `plc_data`.`real2`," &
                                           "  `plc_data`.`real3`," &
@@ -108,6 +78,36 @@ Public Class DB
                                           "  `plc_data`.`real28`," &
                                           "  `plc_data`.`real29`," &
                                           "  `plc_data`.`real30`," &
+                                          "  `plc_data`.`word1`," &
+                                          "  `plc_data`.`word2`," &
+                                          "  `plc_data`.`word3`," &
+                                          "  `plc_data`.`word4`," &
+                                          "  `plc_data`.`word5`," &
+                                          "  `plc_data`.`word6`," &
+                                          "  `plc_data`.`word7`," &
+                                          "  `plc_data`.`word8`," &
+                                          "  `plc_data`.`word9`," &
+                                          "  `plc_data`.`word10`," &
+                                          "  `plc_data`.`word11`," &
+                                          "  `plc_data`.`word12`," &
+                                          "  `plc_data`.`word13`," &
+                                          "  `plc_data`.`word14`," &
+                                          "  `plc_data`.`word15`," &
+                                          "  `plc_data`.`word16`," &
+                                          "  `plc_data`.`word17`," &
+                                          "  `plc_data`.`word18`," &
+                                          "  `plc_data`.`word19`," &
+                                          "  `plc_data`.`word20`," &
+                                          "  `plc_data`.`word21`," &
+                                          "  `plc_data`.`word22`," &
+                                          "  `plc_data`.`word23`," &
+                                          "  `plc_data`.`word24`," &
+                                          "  `plc_data`.`word25`," &
+                                          "  `plc_data`.`word26`," &
+                                          "  `plc_data`.`word27`," &
+                                          "  `plc_data`.`word28`," &
+                                          "  `plc_data`.`word29`," &
+                                          "  `plc_data`.`word30`," &
                                           "  `plc_data`.`lastUpdateTime`" &
                                           "  FROM `trident`.`plc_data`;"
 
@@ -148,67 +148,69 @@ Public Class DB
                         hmiData.measureInt29 = rd.GetInt16(28)
                         hmiData.measureInt30 = rd.GetInt16(29)
 
-                        hmiData.measureWord1 = rd.GetUInt16(30)
-                        hmiData.measureWord2 = rd.GetUInt16(31)
-                        hmiData.measureWord3 = rd.GetUInt16(32)
-                        hmiData.measureWord4 = rd.GetUInt16(33)
-                        hmiData.measureWord5 = rd.GetUInt16(34)
-                        hmiData.measureWord6 = rd.GetUInt16(35)
-                        hmiData.measureWord7 = rd.GetUInt16(36)
-                        hmiData.measureWord8 = rd.GetUInt16(37)
-                        hmiData.measureWord9 = rd.GetUInt16(38)
-                        hmiData.measureWord10 = rd.GetUInt16(39)
-                        hmiData.measureWord11 = rd.GetUInt16(40)
-                        hmiData.measureWord12 = rd.GetUInt16(41)
-                        hmiData.measureWord13 = rd.GetUInt16(42)
-                        hmiData.measureWord14 = rd.GetUInt16(43)
-                        hmiData.measureWord15 = rd.GetUInt16(44)
-                        hmiData.measureWord16 = rd.GetUInt16(45)
-                        hmiData.measureWord17 = rd.GetUInt16(46)
-                        hmiData.measureWord18 = rd.GetUInt16(47)
-                        hmiData.measureWord19 = rd.GetUInt16(48)
-                        hmiData.measureWord20 = rd.GetUInt16(49)
-                        hmiData.measureWord21 = rd.GetUInt16(50)
-                        hmiData.measureWord22 = rd.GetUInt16(51)
-                        hmiData.measureWord23 = rd.GetUInt16(52)
-                        hmiData.measureWord24 = rd.GetUInt16(53)
-                        hmiData.measureWord25 = rd.GetUInt16(54)
-                        hmiData.measureWord26 = rd.GetUInt16(55)
-                        hmiData.measureWord27 = rd.GetUInt16(56)
-                        hmiData.measureWord28 = rd.GetUInt16(57)
-                        hmiData.measureWord29 = rd.GetUInt16(58)
-                        hmiData.measureWord30 = rd.GetUInt16(59)
 
-                        hmiData.MeasureReal1 = rd.GetFloat(60)
-                        hmiData.MeasureReal2 = rd.GetFloat(61)
-                        hmiData.MeasureReal3 = rd.GetFloat(62)
-                        hmiData.MeasureReal4 = rd.GetFloat(63)
-                        hmiData.MeasureReal5 = rd.GetFloat(64)
-                        hmiData.MeasureReal6 = rd.GetFloat(65)
-                        hmiData.MeasureReal7 = rd.GetFloat(66)
-                        hmiData.MeasureReal8 = rd.GetFloat(67)
-                        hmiData.MeasureReal9 = rd.GetFloat(68)
-                        hmiData.MeasureReal10 = rd.GetFloat(69)
-                        hmiData.MeasureReal11 = rd.GetFloat(70)
-                        hmiData.MeasureReal12 = rd.GetFloat(71)
-                        hmiData.MeasureReal13 = rd.GetFloat(72)
-                        hmiData.MeasureReal14 = rd.GetFloat(73)
-                        hmiData.MeasureReal15 = rd.GetFloat(74)
-                        hmiData.MeasureReal16 = rd.GetFloat(75)
-                        hmiData.MeasureReal17 = rd.GetFloat(76)
-                        hmiData.MeasureReal18 = rd.GetFloat(77)
-                        hmiData.MeasureReal19 = rd.GetFloat(78)
-                        hmiData.MeasureReal20 = rd.GetFloat(79)
-                        hmiData.MeasureReal21 = rd.GetFloat(80)
-                        hmiData.MeasureReal22 = rd.GetFloat(81)
-                        hmiData.MeasureReal23 = rd.GetFloat(82)
-                        hmiData.MeasureReal24 = rd.GetFloat(83)
-                        hmiData.MeasureReal25 = rd.GetFloat(84)
-                        hmiData.MeasureReal26 = rd.GetFloat(85)
-                        hmiData.MeasureReal27 = rd.GetFloat(86)
-                        hmiData.MeasureReal28 = rd.GetFloat(87)
-                        hmiData.MeasureReal29 = rd.GetFloat(88)
-                        hmiData.MeasureReal30 = rd.GetFloat(89)
+
+                        hmiData.MeasureReal1 = rd.GetFloat(30)
+                        hmiData.MeasureReal2 = rd.GetFloat(31)
+                        hmiData.MeasureReal3 = rd.GetFloat(32)
+                        hmiData.MeasureReal4 = rd.GetFloat(33)
+                        hmiData.MeasureReal5 = rd.GetFloat(34)
+                        hmiData.MeasureReal6 = rd.GetFloat(35)
+                        hmiData.MeasureReal7 = rd.GetFloat(36)
+                        hmiData.MeasureReal8 = rd.GetFloat(37)
+                        hmiData.MeasureReal9 = rd.GetFloat(38)
+                        hmiData.MeasureReal10 = rd.GetFloat(39)
+                        hmiData.MeasureReal11 = rd.GetFloat(40)
+                        hmiData.MeasureReal12 = rd.GetFloat(41)
+                        hmiData.MeasureReal13 = rd.GetFloat(42)
+                        hmiData.MeasureReal14 = rd.GetFloat(43)
+                        hmiData.MeasureReal15 = rd.GetFloat(44)
+                        hmiData.MeasureReal16 = rd.GetFloat(45)
+                        hmiData.MeasureReal17 = rd.GetFloat(46)
+                        hmiData.MeasureReal18 = rd.GetFloat(47)
+                        hmiData.MeasureReal19 = rd.GetFloat(48)
+                        hmiData.MeasureReal20 = rd.GetFloat(49)
+                        hmiData.MeasureReal21 = rd.GetFloat(50)
+                        hmiData.MeasureReal22 = rd.GetFloat(51)
+                        hmiData.MeasureReal23 = rd.GetFloat(52)
+                        hmiData.MeasureReal24 = rd.GetFloat(53)
+                        hmiData.MeasureReal25 = rd.GetFloat(54)
+                        hmiData.MeasureReal26 = rd.GetFloat(55)
+                        hmiData.MeasureReal27 = rd.GetFloat(56)
+                        hmiData.MeasureReal28 = rd.GetFloat(57)
+                        hmiData.MeasureReal29 = rd.GetFloat(58)
+                        hmiData.MeasureReal30 = rd.GetFloat(59)
+
+                        hmiData.measureWord1 = GlobalVariables.intToStrPhotocells(rd.GetUInt16(60))
+                        hmiData.measureWord2 = rd.GetUInt16(61)
+                        hmiData.measureWord3 = rd.GetUInt16(62)
+                        hmiData.measureWord4 = rd.GetUInt16(63)
+                        hmiData.measureWord5 = rd.GetUInt16(64)
+                        hmiData.measureWord6 = rd.GetUInt16(65)
+                        hmiData.measureWord7 = rd.GetUInt16(66)
+                        hmiData.measureWord8 = rd.GetUInt16(67)
+                        hmiData.measureWord9 = rd.GetUInt16(68)
+                        hmiData.measureWord10 = rd.GetUInt16(69)
+                        hmiData.measureWord11 = rd.GetUInt16(70)
+                        hmiData.measureWord12 = rd.GetUInt16(71)
+                        hmiData.measureWord13 = rd.GetUInt16(72)
+                        hmiData.measureWord14 = rd.GetUInt16(73)
+                        hmiData.measureWord15 = rd.GetUInt16(74)
+                        hmiData.measureWord16 = rd.GetUInt16(75)
+                        hmiData.measureWord17 = rd.GetUInt16(76)
+                        hmiData.measureWord18 = rd.GetUInt16(77)
+                        hmiData.measureWord19 = rd.GetUInt16(78)
+                        hmiData.measureWord20 = rd.GetUInt16(79)
+                        hmiData.measureWord21 = rd.GetUInt16(80)
+                        hmiData.measureWord22 = rd.GetUInt16(81)
+                        hmiData.measureWord23 = rd.GetUInt16(82)
+                        hmiData.measureWord24 = rd.GetUInt16(83)
+                        hmiData.measureWord25 = rd.GetUInt16(84)
+                        hmiData.measureWord26 = rd.GetUInt16(85)
+                        hmiData.measureWord27 = rd.GetUInt16(86)
+                        hmiData.measureWord28 = rd.GetUInt16(87)
+                        hmiData.measureWord29 = rd.GetUInt16(88)
+                        hmiData.measureWord30 = rd.GetUInt16(89)
 
                     End If
 
