@@ -229,5 +229,44 @@ Public Class DB
     End Sub
 
 
+    Public Shared Sub ReadBarcodesData(ByRef dgv As DataGridView)
 
+
+
+        Try
+            SyncLock DBobjLock
+                Dim SQLConnection As MySqlConnection = New MySqlConnection(connectionString)
+                Dim sqlCommand As New MySqlCommand
+                Dim sda As New MySqlDataAdapter
+                Dim dt As New DataTable
+                Dim bs As New BindingSource
+                Dim str_carSql As String
+                Dim rd As MySqlDataReader
+                Try
+                    SQLConnection.Open()
+                    str_carSql = "SELECT * FROM `trident`.`barcodes`;"
+
+
+                    sqlCommand.Connection = SQLConnection
+                    sqlCommand.CommandText = str_carSql
+                    sda.SelectCommand = sqlCommand
+                    sda.Fill(dt)
+                    bs.DataSource = dt
+                    dgv.DataSource = bs
+                    sda.Update(dt)
+
+
+
+                Catch ex As Exception
+
+                Finally
+                    SQLConnection.Close()
+                End Try
+
+            End SyncLock
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class

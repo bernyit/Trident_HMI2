@@ -53,5 +53,24 @@
 
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        DB.ReadBarcodesData(DataGridView1)
+    End Sub
 
+    Private Sub btnSelectBarcodeFile_Click(sender As Object, e As EventArgs) Handles btnSelectBarcodeFile.Click
+
+        OpenFileDialog1.Title = "Select barcodes/destination file"
+        OpenFileDialog1.Filter = "CSV|*.csv"
+
+        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+            txtBarcodeFileName.Text = OpenFileDialog1.FileName
+        End If
+
+    End Sub
+
+    Private Sub btnImportBarcodes_Click(sender As Object, e As EventArgs) Handles btnImportBarcodes.Click
+        If MsgBox("Delete old data and import new association", MsgBoxStyle.OkCancel, "Barcodes / Destination import") = MsgBoxResult.Ok Then
+
+        End If
+    End Sub
 End Class

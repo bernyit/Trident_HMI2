@@ -40,9 +40,18 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtBarcodeFileName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnSelectBarcodeFile = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.btnImportBarcodes = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -185,6 +194,12 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnImportBarcodes)
+        Me.TabPage2.Controls.Add(Me.btnSelectBarcodeFile)
+        Me.TabPage2.Controls.Add(Me.Label2)
+        Me.TabPage2.Controls.Add(Me.txtBarcodeFileName)
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.Button3)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -202,6 +217,57 @@ Partial Class Form1
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(856, 15)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(224, 28)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "btnShowBarcodeTable"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(826, 82)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(254, 425)
+        Me.DataGridView1.TabIndex = 1
+        '
+        'txtBarcodeFileName
+        '
+        Me.txtBarcodeFileName.Location = New System.Drawing.Point(33, 37)
+        Me.txtBarcodeFileName.Name = "txtBarcodeFileName"
+        Me.txtBarcodeFileName.Size = New System.Drawing.Size(618, 20)
+        Me.txtBarcodeFileName.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(30, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(202, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Select cvs file with barcode / destination "
+        '
+        'btnSelectBarcodeFile
+        '
+        Me.btnSelectBarcodeFile.Location = New System.Drawing.Point(654, 37)
+        Me.btnSelectBarcodeFile.Name = "btnSelectBarcodeFile"
+        Me.btnSelectBarcodeFile.Size = New System.Drawing.Size(26, 21)
+        Me.btnSelectBarcodeFile.TabIndex = 4
+        Me.btnSelectBarcodeFile.Text = "..."
+        Me.btnSelectBarcodeFile.UseVisualStyleBackColor = True
+        '
+        'btnImportBarcodes
+        '
+        Me.btnImportBarcodes.Location = New System.Drawing.Point(574, 68)
+        Me.btnImportBarcodes.Name = "btnImportBarcodes"
+        Me.btnImportBarcodes.Size = New System.Drawing.Size(105, 24)
+        Me.btnImportBarcodes.TabIndex = 5
+        Me.btnImportBarcodes.Text = "Import new data"
+        Me.btnImportBarcodes.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -216,6 +282,9 @@ Partial Class Form1
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -237,4 +306,11 @@ Partial Class Form1
     Friend WithEvents ph01 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button3 As Button
+    Friend WithEvents btnSelectBarcodeFile As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtBarcodeFileName As TextBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents btnImportBarcodes As Button
 End Class
