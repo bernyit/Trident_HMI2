@@ -6,16 +6,16 @@
     Structure WORKING_DATA
         Dim CoilId As String
         Dim meter As Integer
-        Dim measureInt1 As Int16
-        Dim measureInt2 As Int16
-        Dim measureInt3 As Int16
-        Dim measureInt4 As Int16
-        Dim measureInt5 As Int16
-        Dim measureInt6 As Int16
+        Dim year As Int16
+        Dim month As Int16
+        Dim day As Int16
+        Dim hour As Int16
+        Dim minute As Int16
+        Dim second As Int16
         Dim measureInt7 As Int16
         Dim measureInt8 As Int16
         Dim measureInt9 As Int16
-        Dim measureInt10 As Int16
+        Dim PH01_Parcel_ID As Int16
         Dim measureInt11 As Int16
         Dim measureInt12 As Int16
         Dim measureInt13 As Int16
@@ -68,8 +68,8 @@
         Dim MeasureReal29 As Decimal
         Dim MeasureReal30 As Decimal
 
-        Dim measureWord1 As strPhotocells
-        Dim measureWord2 As UInt16
+        Dim photocells As strPhotocells
+        Dim triggers As strTrig
         Dim measureWord3 As UInt16
         Dim measureWord4 As UInt16
         Dim measureWord5 As UInt16
@@ -120,24 +120,26 @@
         Dim Spare14 As Boolean
         Dim Spare15 As Boolean
         Dim Spare16 As Boolean
-        Dim Spare17 As Boolean
-        Dim Spare18 As Boolean
-        Dim Spare19 As Boolean
-        Dim Spare20 As Boolean
-        Dim Spare21 As Boolean
-        Dim Spare22 As Boolean
-        Dim Spare23 As Boolean
-        Dim Spare24 As Boolean
-        Dim Spare25 As Boolean
-        Dim Spare26 As Boolean
-        Dim Spare27 As Boolean
-        Dim Spare28 As Boolean
-        Dim Spare29 As Boolean
-        Dim Spare30 As Boolean
-        Dim Spare31 As Boolean
-        Dim Spare32 As Boolean
     End Structure
 
+    Structure strTrig
+        Dim newParcelOnPH01 As Boolean
+        Dim Spare02 As Boolean
+        Dim Spare03 As Boolean
+        Dim Spare04 As Boolean
+        Dim Spare05 As Boolean
+        Dim Spare06 As Boolean
+        Dim Spare07 As Boolean
+        Dim Spare08 As Boolean
+        Dim Spare09 As Boolean
+        Dim Spare10 As Boolean
+        Dim Spare11 As Boolean
+        Dim Spare12 As Boolean
+        Dim Spare13 As Boolean
+        Dim Spare14 As Boolean
+        Dim Spare15 As Boolean
+        Dim Spare16 As Boolean
+    End Structure
 
     Public Function intToStrPhotocells(ByVal number As UInt16) As strPhotocells
 
@@ -155,29 +157,36 @@
         retVal.ph10 = number And 512
         retVal.ph11 = number And 1024
         retVal.ph12 = number And 2048
-        retVal.Spare13 = 0
-        retVal.Spare14 = 0
-        retVal.Spare15 = 0
-        retVal.Spare16 = 0
-        retVal.Spare17 = 0
-        retVal.Spare18 = 0
-        retVal.Spare19 = 0
-        retVal.Spare20 = 0
-        retVal.Spare21 = 0
-        retVal.Spare22 = 0
-        retVal.Spare23 = 0
-        retVal.Spare24 = 0
-        retVal.Spare25 = 0
-        retVal.Spare26 = 0
-        retVal.Spare27 = 0
-        retVal.Spare28 = 0
-        retVal.Spare29 = 0
-        retVal.Spare30 = 0
-        retVal.Spare31 = 0
-        retVal.Spare32 = 0
+        retVal.Spare13 = number And 4096
+        retVal.Spare14 = number And 8192
+        retVal.Spare15 = number And 16384
+        retVal.Spare16 = number And 32768
 
         Return retVal
     End Function
 
+    Public Function intToStrTrig(ByVal number As UInt16) As strTrig
 
+        Dim retVal As strTrig
+
+        retVal.newParcelOnPH01 = number And 1
+        retVal.Spare02 = number And 2
+        retVal.Spare03 = number And 4
+        retVal.Spare04 = number And 8
+        retVal.Spare05 = number And 16
+        retVal.Spare06 = number And 32
+        retVal.Spare07 = number And 64
+        retVal.Spare08 = number And 128
+        retVal.Spare09 = number And 256
+        retVal.Spare10 = number And 512
+        retVal.Spare11 = number And 1024
+        retVal.Spare12 = number And 2048
+        retVal.Spare13 = number And 4096
+        retVal.Spare14 = number And 8192
+        retVal.Spare15 = number And 16384
+        retVal.Spare16 = number And 32768
+
+
+        Return retVal
+    End Function
 End Module

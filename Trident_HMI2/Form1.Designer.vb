@@ -47,6 +47,7 @@ Partial Class Form1
         Me.btnSelectBarcodeFile = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnImportBarcodes = New System.Windows.Forms.Button()
+        Me.lblParcelID_PH01 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +90,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.lblParcelID_PH01)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.ph12)
         Me.TabPage1.Controls.Add(Me.ph10)
@@ -268,6 +270,16 @@ Partial Class Form1
         Me.btnImportBarcodes.Text = "Import new data"
         Me.btnImportBarcodes.UseVisualStyleBackColor = True
         '
+        'lblParcelID_PH01
+        '
+        Me.lblParcelID_PH01.AutoSize = True
+        Me.lblParcelID_PH01.BackColor = System.Drawing.Color.Transparent
+        Me.lblParcelID_PH01.Location = New System.Drawing.Point(134, 198)
+        Me.lblParcelID_PH01.Name = "lblParcelID_PH01"
+        Me.lblParcelID_PH01.Size = New System.Drawing.Size(39, 13)
+        Me.lblParcelID_PH01.TabIndex = 11
+        Me.lblParcelID_PH01.Text = "Label1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -313,4 +325,5 @@ Partial Class Form1
     Friend WithEvents txtBarcodeFileName As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnImportBarcodes As Button
+    Friend WithEvents lblParcelID_PH01 As Label
 End Class

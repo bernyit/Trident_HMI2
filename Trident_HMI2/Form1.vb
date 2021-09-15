@@ -12,13 +12,16 @@
 
 
             DB.ReadHmiData()
-            lblDateTime.Text = GlobalVariables.hmiData.measureInt1 & "-" _
-                               & GlobalVariables.hmiData.measureInt2 & "-" _
-                               & GlobalVariables.hmiData.measureInt3 & " " _
-                               & GlobalVariables.hmiData.measureInt4 & ":" _
-                               & GlobalVariables.hmiData.measureInt5 & ":" _
-                               & GlobalVariables.hmiData.measureInt6
+            lblDateTime.Text = GlobalVariables.hmiData.year & "-" _
+                               & GlobalVariables.hmiData.month & "-" _
+                               & GlobalVariables.hmiData.day & " " _
+                               & GlobalVariables.hmiData.hour & ":" _
+                               & GlobalVariables.hmiData.minute & ":" _
+                               & GlobalVariables.hmiData.second
             updatePhotocells()
+            updateTriggerInfo()
+
+
         Catch ex As Exception
 
         End Try
@@ -38,20 +41,30 @@
 
 
     Private Sub updatePhotocells()
-        ph01.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph01, 1, 0)
-        ph02.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph02, 1, 0)
-        ph03.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph03, 1, 0)
-        ph04.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph04, 1, 0)
-        ph05.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph05, 1, 0)
-        'ph06.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph06, 1, 0)
-        ph07.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph07, 1, 0)
-        'ph08.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph08, 1, 0)
-        'ph09.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph09, 1, 0)
-        ph10.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph10, 1, 0)
-        'ph11.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph11, 1, 0)
-        ph12.Visible = IIf(GlobalVariables.hmiData.measureWord1.ph12, 1, 0)
+        ph01.Visible = IIf(GlobalVariables.hmiData.photocells.ph01, 1, 0)
+        ph02.Visible = IIf(GlobalVariables.hmiData.photocells.ph02, 1, 0)
+        ph03.Visible = IIf(GlobalVariables.hmiData.photocells.ph03, 1, 0)
+        ph04.Visible = IIf(GlobalVariables.hmiData.photocells.ph04, 1, 0)
+        ph05.Visible = IIf(GlobalVariables.hmiData.photocells.ph05, 1, 0)
+        'ph06.Visible = IIf(GlobalVariables.hmiData.photocells.ph06, 1, 0)
+        ph07.Visible = IIf(GlobalVariables.hmiData.photocells.ph07, 1, 0)
+        'ph08.Visible = IIf(GlobalVariables.hmiData.photocells.ph08, 1, 0)
+        'ph09.Visible = IIf(GlobalVariables.hmiData.photocells.ph09, 1, 0)
+        ph10.Visible = IIf(GlobalVariables.hmiData.photocells.ph10, 1, 0)
+        'ph11.Visible = IIf(GlobalVariables.hmiData.photocells.ph11, 1, 0)
+        ph12.Visible = IIf(GlobalVariables.hmiData.photocells.ph12, 1, 0)
 
     End Sub
+
+    Private Sub updateTriggerInfo()
+        lblParcelID_PH01.Text = GlobalVariables.hmiData.PH01_Parcel_ID
+        If GlobalVariables.hmiData.triggers.newParcelOnPH01 Then
+            lblParcelID_PH01.BackColor = Color.LightGreen
+        Else
+            lblParcelID_PH01.BackColor = Color.Transparent
+        End If
+    End Sub
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         DB.ReadBarcodesData(DataGridView1)
