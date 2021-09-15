@@ -20,6 +20,8 @@
                                & GlobalVariables.hmiData.second
             updatePhotocells()
             updateTriggerInfo()
+            updateConnectionStatus()
+
 
 
         Catch ex As Exception
@@ -65,6 +67,25 @@
         End If
     End Sub
 
+    Private Sub updateConnectionStatus()
+        DB.ReadStatus()
+
+        If GlobalVariables.plcConnectionStatus > 0 Then
+            lblPlcConnectionStatus.Text = "PLC CONNECTED"
+            lblPlcConnectionStatus.BackColor = Color.Lime
+        Else
+            lblPlcConnectionStatus.Text = "NO PLC"
+            lblPlcConnectionStatus.BackColor = Color.Red
+        End If
+
+        If GlobalVariables.scannerConnectionStatus > 0 Then
+            lblScannerStatus.Text = "VICAM CONNECTED"
+            lblScannerStatus.BackColor = Color.Lime
+        Else
+            lblScannerStatus.Text = "NO VICAM"
+            lblScannerStatus.BackColor = Color.Red
+        End If
+    End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         DB.ReadBarcodesData(DataGridView1)
@@ -85,5 +106,9 @@
         If MsgBox("Delete old data and import new association", MsgBoxStyle.OkCancel, "Barcodes / Destination import") = MsgBoxResult.Ok Then
 
         End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        DB.ReadStatus()
     End Sub
 End Class

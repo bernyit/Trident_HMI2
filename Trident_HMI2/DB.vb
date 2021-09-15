@@ -269,4 +269,51 @@ Public Class DB
         End Try
 
     End Sub
+
+
+
+
+    Public Shared Sub ReadStatus()
+
+        Dim plcStatus As Int16 = 0
+        Dim scannerStatus As Int16 = 0
+
+        Try
+            SyncLock DBobjLock
+                Dim SQLConnection As MySqlConnection = New MySqlConnection(connectionString)
+                Dim sqlCommand As New MySqlCommand
+                Dim str_carSql As String
+                Dim rd As MySqlDataReader
+                Try
+                    SQLConnection.Open()
+                    str_carSql = "SELECT plcConnectionStatus,scannerConnectionStatus FROM `trident`.`auxstatus` where lastCheckTime > DATE_SUB( CURRENT_TIME(), INTERVAL 30 SECOND) ORDER BY IDAUXSTATUS DESC;"
+
+
+                    sqlCommand.Connection = SQLConnection
+                    sqlCommand.CommandText = str_carSql
+                    rd = sqlCommand.ExecuteReader()
+
+                    If rd.Read Then
+                        plcStatus = rd.GetInt16(0)
+                        scannerStatus = rd.GetInt16(1)
+
+                    End If
+
+
+                Catch ex As Exception
+
+                Finally
+                    SQLConnection.Close()
+                End Try
+
+            End SyncLock
+        Catch ex As Exception
+
+        End Try
+
+        GlobalVariables.plcConnectionStatus = plcStatus
+        GlobalVariables.scannerConnectionStatus = scannerStatus
+
+    End Sub
+
 End Class

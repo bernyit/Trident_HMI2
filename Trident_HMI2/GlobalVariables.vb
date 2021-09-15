@@ -1,5 +1,7 @@
 ﻿Module GlobalVariables
 
+    Public plcConnectionStatus As Int16
+    Public scannerConnectionStatus As Int16
 
     Public hmiData As WORKING_DATA
 
