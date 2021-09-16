@@ -183,9 +183,9 @@ Public Class DB
 
                         hmiData.photocells = GlobalVariables.intToStrPhotocells(rd.GetUInt16(60))
                         hmiData.triggers = GlobalVariables.intToStrTrig(rd.GetUInt16(61))
-                        hmiData.measureWord3 = rd.GetUInt16(62)
-                        hmiData.measureWord4 = rd.GetUInt16(63)
-                        hmiData.measureWord5 = rd.GetUInt16(64)
+                        hmiData.faultW1 = GlobalVariables.wordToBit(rd.GetUInt16(62))
+                        hmiData.faultW2 = GlobalVariables.wordToBit(rd.GetUInt16(63))
+                        hmiData.alarmW1 = GlobalVariables.wordToBit(rd.GetUInt16(64))
                         hmiData.measureWord6 = rd.GetUInt16(65)
                         hmiData.measureWord7 = rd.GetUInt16(66)
                         hmiData.measureWord8 = rd.GetUInt16(67)

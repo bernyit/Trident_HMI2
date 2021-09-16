@@ -128,5 +128,14 @@
   <ItemGroup>
     <None Include="Resources\LAYOUT.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down30Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up30Arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

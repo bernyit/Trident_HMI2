@@ -3,6 +3,10 @@
     Public plcConnectionStatus As Int16
     Public scannerConnectionStatus As Int16
 
+    Public faultPresence As Boolean
+    Public alarmPresence As Boolean
+
+
     Public hmiData As WORKING_DATA
 
     Public Structure strBarcodeDestination
@@ -77,9 +81,9 @@
 
         Dim photocells As strPhotocells
         Dim triggers As strTrig
-        Dim measureWord3 As UInt16
-        Dim measureWord4 As UInt16
-        Dim measureWord5 As UInt16
+        Dim faultW1 As strBit
+        Dim faultW2 As strBit
+        Dim alarmW1 As strBit
         Dim measureWord6 As UInt16
         Dim measureWord7 As UInt16
         Dim measureWord8 As UInt16
@@ -148,6 +152,28 @@
         Dim Spare16 As Boolean
     End Structure
 
+
+    Structure strBit
+        Dim word As UInt16
+        Dim bit00 As Boolean
+        Dim bit01 As Boolean
+        Dim bit02 As Boolean
+        Dim bit03 As Boolean
+        Dim bit04 As Boolean
+        Dim bit05 As Boolean
+        Dim bit06 As Boolean
+        Dim bit07 As Boolean
+        Dim bit08 As Boolean
+        Dim bit09 As Boolean
+        Dim bit10 As Boolean
+        Dim bit11 As Boolean
+        Dim bit12 As Boolean
+        Dim bit13 As Boolean
+        Dim bit14 As Boolean
+        Dim bit15 As Boolean
+    End Structure
+
+
     Public Function intToStrPhotocells(ByVal number As UInt16) As strPhotocells
 
         Dim retVal As strPhotocells
@@ -192,6 +218,31 @@
         retVal.Spare14 = number And 8192
         retVal.Spare15 = number And 16384
         retVal.Spare16 = number And 32768
+
+
+        Return retVal
+    End Function
+
+    Public Function wordToBit(ByVal number As UInt16) As strBit
+
+        Dim retVal As strBit
+        retVal.word = number
+        retVal.bit00 = number And 1
+        retVal.bit01 = number And 2
+        retVal.bit02 = number And 4
+        retVal.bit03 = number And 8
+        retVal.bit04 = number And 16
+        retVal.bit05 = number And 32
+        retVal.bit06 = number And 64
+        retVal.bit07 = number And 128
+        retVal.bit08 = number And 256
+        retVal.bit09 = number And 512
+        retVal.bit10 = number And 1024
+        retVal.bit11 = number And 2048
+        retVal.bit12 = number And 4096
+        retVal.bit13 = number And 8192
+        retVal.bit14 = number And 16384
+        retVal.bit15 = number And 32768
 
 
         Return retVal
