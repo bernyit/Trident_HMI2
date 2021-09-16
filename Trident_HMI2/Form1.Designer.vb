@@ -51,6 +51,11 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.lblPlcConnectionStatus = New System.Windows.Forms.Label()
         Me.lblScannerStatus = New System.Windows.Forms.Label()
+        Me.btnPreviewCsv = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lstBarcodePreview = New System.Windows.Forms.ListView()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +98,8 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.lblParcelID_PH01)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.ph12)
@@ -125,12 +132,15 @@ Partial Class Form1
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(862, 266)
+        Me.Label1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(834, 484)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(40, 33)
         Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "1"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ph12
         '
@@ -209,6 +219,8 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.lstBarcodePreview)
+        Me.TabPage2.Controls.Add(Me.btnPreviewCsv)
         Me.TabPage2.Controls.Add(Me.btnImportBarcodes)
         Me.TabPage2.Controls.Add(Me.btnSelectBarcodeFile)
         Me.TabPage2.Controls.Add(Me.Label2)
@@ -262,7 +274,7 @@ Partial Class Form1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(826, 82)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(254, 425)
+        Me.DataGridView1.Size = New System.Drawing.Size(254, 580)
         Me.DataGridView1.TabIndex = 1
         '
         'Button3
@@ -312,11 +324,66 @@ Partial Class Form1
         Me.lblScannerStatus.Text = "SCANNER"
         Me.lblScannerStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnPreviewCsv
+        '
+        Me.btnPreviewCsv.Location = New System.Drawing.Point(33, 68)
+        Me.btnPreviewCsv.Name = "btnPreviewCsv"
+        Me.btnPreviewCsv.Size = New System.Drawing.Size(105, 24)
+        Me.btnPreviewCsv.TabIndex = 7
+        Me.btnPreviewCsv.Text = "Preview Data"
+        Me.btnPreviewCsv.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Location = New System.Drawing.Point(656, 358)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Label1"
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(860, 324)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 33)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "2"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(834, 163)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(40, 33)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "3"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lstBarcodePreview
+        '
+        Me.lstBarcodePreview.FullRowSelect = True
+        Me.lstBarcodePreview.GridLines = True
+        Me.lstBarcodePreview.HideSelection = False
+        Me.lstBarcodePreview.Location = New System.Drawing.Point(42, 117)
+        Me.lstBarcodePreview.Name = "lstBarcodePreview"
+        Me.lstBarcodePreview.Size = New System.Drawing.Size(310, 545)
+        Me.lstBarcodePreview.TabIndex = 8
+        Me.lstBarcodePreview.UseCompatibleStateImageBehavior = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblScannerStatus)
         Me.Controls.Add(Me.lblPlcConnectionStatus)
         Me.Controls.Add(Me.Button4)
@@ -333,6 +400,7 @@ Partial Class Form1
         Me.TabPage2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -364,4 +432,9 @@ Partial Class Form1
     Friend WithEvents Button4 As Button
     Friend WithEvents lblPlcConnectionStatus As Label
     Friend WithEvents lblScannerStatus As Label
+    Friend WithEvents btnPreviewCsv As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents lstBarcodePreview As ListView
 End Class

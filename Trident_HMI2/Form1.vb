@@ -104,11 +104,38 @@
 
     Private Sub btnImportBarcodes_Click(sender As Object, e As EventArgs) Handles btnImportBarcodes.Click
         If MsgBox("Delete old data and import new association", MsgBoxStyle.OkCancel, "Barcodes / Destination import") = MsgBoxResult.Ok Then
-
+            DB.insertBarcodesData(FileManagement.readCsv(txtBarcodeFileName.Text))
         End If
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         DB.ReadStatus()
     End Sub
+
+    Private Sub btnPreviewCsv_Click(sender As Object, e As EventArgs) Handles btnPreviewCsv.Click
+        Try
+            showList(FileManagement.readCsv(txtBarcodeFileName.Text))
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error reading file")
+        End Try
+
+    End Sub
+
+    Private Sub showList(ByVal data As List(Of strBarcodeDestination))
+        lstBarcodePreview.View = System.Windows.Forms.View.Details
+        lstBarcodePreview.Columns.Add("Barcode", 100, HorizontalAlignment.Center)
+        lstBarcodePreview.Columns.Add("Destination", 100, HorizontalAlignment.Center)
+        lstBarcodePreview.Columns.Add("Destination", 100, HorizontalAlignment.Center)
+
+        Dim itemCounter As Integer = 0
+        For Each item In data
+
+            Dim newItem As New ListViewItem(item.barcode)
+            newItem.SubItems.Add(item.destination)
+            newItem.SubItems.Add(intDestinationToText(item.destination))
+            lstBarcodePreview.Items.Add(newItem)
+        Next
+    End Sub
+
+
 End Class

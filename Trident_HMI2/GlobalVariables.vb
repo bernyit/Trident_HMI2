@@ -1,9 +1,14 @@
-﻿Module GlobalVariables
+﻿Public Module GlobalVariables
 
     Public plcConnectionStatus As Int16
     Public scannerConnectionStatus As Int16
 
     Public hmiData As WORKING_DATA
+
+    Public Structure strBarcodeDestination
+        Dim barcode As String
+        Dim destination As Int16
+    End Structure
 
     Structure WORKING_DATA
         Dim CoilId As String
@@ -191,4 +196,23 @@
 
         Return retVal
     End Function
+
+
+    Public Function intDestinationToText(ByVal iVal As Int16)
+
+        Dim retVal As String = "-"
+        Select Case iVal
+            Case 1
+                retVal = "Right"
+            Case 2
+                retVal = "Center"
+            Case 3
+                retVal = "Left"
+
+        End Select
+
+        Return retVal
+    End Function
+
+
 End Module

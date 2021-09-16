@@ -229,9 +229,44 @@ Public Class DB
     End Sub
 
 
+    Public Shared Sub insertBarcodesData(ByVal data As List(Of strBarcodeDestination))
+
+        Try
+            SyncLock DBobjLock
+                Dim SQLConnection As MySqlConnection = New MySqlConnection(connectionString)
+                Dim sqlCommand As New MySqlCommand
+                Dim str_carSql As String
+                Try
+                    SQLConnection.Open()
+                    sqlCommand.Connection = SQLConnection
+
+                    sqlCommand.CommandText = "delete from barcodes;"
+                    sqlCommand.ExecuteNonQuery()
+
+                    For Each item In data
+                        str_carSql = "insert into barcodes (barcode, destination) values (" &
+                                                  "'" & item.barcode & "'," &
+                                                  item.destination & ");"
+
+                        sqlCommand.CommandText = str_carSql
+                        sqlCommand.ExecuteNonQuery()
+                    Next
+
+
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error while insert into database")
+                Finally
+                    SQLConnection.Close()
+                End Try
+
+            End SyncLock
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     Public Shared Sub ReadBarcodesData(ByRef dgv As DataGridView)
-
-
 
         Try
             SyncLock DBobjLock
