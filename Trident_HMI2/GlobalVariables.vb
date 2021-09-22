@@ -85,7 +85,7 @@
         Dim faultW2 As strBit
         Dim alarmW1 As strBit
         Dim measureWord6 As UInt16
-        Dim measureWord7 As UInt16
+        Dim statusW1 As strBit
         Dim measureWord8 As UInt16
         Dim measureWord9 As UInt16
         Dim measureWord10 As UInt16
@@ -127,7 +127,7 @@
         Dim ph10 As Boolean
         Dim ph11 As Boolean
         Dim ph12 As Boolean
-        Dim Spare13 As Boolean
+        Dim ph13 As Boolean
         Dim Spare14 As Boolean
         Dim Spare15 As Boolean
         Dim Spare16 As Boolean
@@ -190,7 +190,7 @@
         retVal.ph10 = number And 512
         retVal.ph11 = number And 1024
         retVal.ph12 = number And 2048
-        retVal.Spare13 = number And 4096
+        retVal.ph13 = number And 4096
         retVal.Spare14 = number And 8192
         retVal.Spare15 = number And 16384
         retVal.Spare16 = number And 32768

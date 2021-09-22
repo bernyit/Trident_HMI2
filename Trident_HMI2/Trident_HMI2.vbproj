@@ -137,5 +137,11 @@
   <ItemGroup>
     <None Include="Resources\up30Arrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VICAM_RED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VICAM_GREEN.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -187,7 +187,7 @@ Public Class DB
                         hmiData.faultW2 = GlobalVariables.wordToBit(rd.GetUInt16(63))
                         hmiData.alarmW1 = GlobalVariables.wordToBit(rd.GetUInt16(64))
                         hmiData.measureWord6 = rd.GetUInt16(65)
-                        hmiData.measureWord7 = rd.GetUInt16(66)
+                        hmiData.statusW1 = GlobalVariables.wordToBit(rd.GetUInt16(66))
                         hmiData.measureWord8 = rd.GetUInt16(67)
                         hmiData.measureWord9 = rd.GetUInt16(68)
                         hmiData.measureWord10 = rd.GetUInt16(69)

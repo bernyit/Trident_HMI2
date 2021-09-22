@@ -50,26 +50,35 @@
 
 
     Private Sub updatePhotocells()
-        ph01.Visible = IIf(GlobalVariables.hmiData.photocells.ph01, 1, 0)
-        ph02.Visible = IIf(GlobalVariables.hmiData.photocells.ph02, 1, 0)
-        ph03.Visible = IIf(GlobalVariables.hmiData.photocells.ph03, 1, 0)
-        ph04.Visible = IIf(GlobalVariables.hmiData.photocells.ph04, 1, 0)
-        ph05.Visible = IIf(GlobalVariables.hmiData.photocells.ph05, 1, 0)
-        'ph06.Visible = IIf(GlobalVariables.hmiData.photocells.ph06, 1, 0)
-        ph07.Visible = IIf(GlobalVariables.hmiData.photocells.ph07, 1, 0)
-        ph08.Visible = IIf(GlobalVariables.hmiData.photocells.ph08, 1, 0)
-        ph09.Visible = IIf(GlobalVariables.hmiData.photocells.ph09, 1, 0)
-        ph10.Visible = IIf(GlobalVariables.hmiData.photocells.ph10, 1, 0)
-        ph11.Visible = IIf(GlobalVariables.hmiData.photocells.ph11, 1, 0)
-        ph12.Visible = IIf(GlobalVariables.hmiData.photocells.ph12, 1, 0)
 
+        Dim busyColor As Color = Color.LightGreen
+        Dim freeColor As Color = Color.White
+
+        PH01.BackColor = IIf(GlobalVariables.hmiData.photocells.ph01, busyColor, freeColor)
+        ph02.BackColor = IIf(GlobalVariables.hmiData.photocells.ph02, busyColor, freeColor)
+        ph03.BackColor = IIf(GlobalVariables.hmiData.photocells.ph03, busyColor, freeColor)
+        ph04.BackColor = IIf(GlobalVariables.hmiData.photocells.ph04, busyColor, freeColor)
+        ph05.BackColor = IIf(GlobalVariables.hmiData.photocells.ph05, busyColor, freeColor)
+        ph06.BackColor = IIf(GlobalVariables.hmiData.photocells.ph06, busyColor, freeColor)
+        'ph07.BackColor = IIf(GlobalVariables.hmiData.photocells.ph07, busyColor, freeColor)
+        ph08.BackColor = IIf(GlobalVariables.hmiData.photocells.ph08, busyColor, freeColor)
+        ph09.BackColor = IIf(GlobalVariables.hmiData.photocells.ph09, busyColor, freeColor)
+        ph10.BackColor = IIf(GlobalVariables.hmiData.photocells.ph10, busyColor, freeColor)
+        ph11.BackColor = IIf(GlobalVariables.hmiData.photocells.ph11, busyColor, freeColor)
+        ph12.BackColor = IIf(GlobalVariables.hmiData.photocells.ph12, busyColor, freeColor)
+        ph13.BackColor = IIf(GlobalVariables.hmiData.photocells.ph13, busyColor, freeColor)
     End Sub
 
     Private Sub updateEmergency()
-        lblEstop01.Visible = IIf(GlobalVariables.hmiData.faultW2.bit02 = 0 And Now.Second Mod 2 = 0, 1, 0)
-        lblEstop02.Visible = IIf(GlobalVariables.hmiData.faultW2.bit03 = 0 And Now.Second Mod 2 = 0, 1, 0)
-        lblEstop03.Visible = IIf(GlobalVariables.hmiData.faultW2.bit04 = 0 And Now.Second Mod 2 = 0, 1, 0)
-        lblEstop04.Visible = IIf(GlobalVariables.hmiData.faultW2.bit05 = 0 And Now.Second Mod 2 = 0, 1, 0)
+
+        Dim OkColor As Color = Color.White
+        Dim NotOkColor As Color = Color.Red
+
+
+        lblEstop01.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit02 = 0 And Now.Second Mod 2 = 0, NotOkColor, OkColor)
+        lblEstop02.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit03 = 0 And Now.Second Mod 2 = 0, NotOkColor, OkColor)
+        lblEstop03.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit04 = 0 And Now.Second Mod 2 = 0, NotOkColor, OkColor)
+        lblEstop04.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit05 = 0 And Now.Second Mod 2 = 0, NotOkColor, OkColor)
     End Sub
 
 
@@ -93,13 +102,30 @@
             lblPlcConnectionStatus.BackColor = Color.Red
         End If
 
-        If GlobalVariables.scannerConnectionStatus > 0 Then
-            lblScannerStatus.Text = "VICAM CONNECTED"
-            lblScannerStatus.BackColor = Color.Lime
+        If GlobalVariables.hmiData.statusW1.bit01 = True Then
+            lblScannerLeftStatus.Text = "VICAM LEFT CONNECTED"
+            lblScannerLeftStatus.BackColor = Color.Lime
+            picVicamLeftGreen.Visible = True
+            picVicamLeftRed.Visible = False
         Else
-            lblScannerStatus.Text = "NO VICAM"
-            lblScannerStatus.BackColor = Color.Red
+            lblScannerLeftStatus.Text = "VICAM LEFT NOT CONNECTED"
+            lblScannerLeftStatus.BackColor = Color.Red
+            picVicamLeftGreen.Visible = False
+            picVicamLeftRed.Visible = True
         End If
+
+        If GlobalVariables.hmiData.statusW1.bit02 = True Then
+            lblScannerRightStatus.Text = "VICAM RIGHT CONNECTED"
+            lblScannerRightStatus.BackColor = Color.Lime
+            picVicamRightGreen.Visible = True
+            picVicamRightRed.Visible = False
+        Else
+            lblScannerRightStatus.Text = "VICAM RIGHT NOT CONNECTED"
+            lblScannerRightStatus.BackColor = Color.Red
+            picVicamRightGreen.Visible = False
+            picVicamRightRed.Visible = True
+        End If
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
