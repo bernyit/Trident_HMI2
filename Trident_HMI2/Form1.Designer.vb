@@ -28,14 +28,31 @@ Partial Class Form1
         Me.lblDateTime = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.picVicamRightRed = New System.Windows.Forms.PictureBox()
+        Me.picVicamLeftRed = New System.Windows.Forms.PictureBox()
+        Me.picVicamLeftGreen = New System.Windows.Forms.PictureBox()
+        Me.picVicamRightGreen = New System.Windows.Forms.PictureBox()
+        Me.ph13 = New System.Windows.Forms.Label()
         Me.lblEstop02 = New System.Windows.Forms.Label()
         Me.lblEstop04 = New System.Windows.Forms.Label()
         Me.lblEstop01 = New System.Windows.Forms.Label()
         Me.lblEstop03 = New System.Windows.Forms.Label()
         Me.ph08 = New System.Windows.Forms.Label()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ph12 = New System.Windows.Forms.Label()
         Me.ph10 = New System.Windows.Forms.Label()
         Me.ph09 = New System.Windows.Forms.Label()
+        Me.ph06 = New System.Windows.Forms.Label()
+        Me.ph05 = New System.Windows.Forms.Label()
         Me.ph04 = New System.Windows.Forms.Label()
         Me.ph03 = New System.Windows.Forms.Label()
         Me.ph02 = New System.Windows.Forms.Label()
@@ -45,7 +62,33 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblParcelID_PH01 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.BtnSet510B2Pos = New System.Windows.Forms.Button()
+        Me.BtnSet510B1Pos = New System.Windows.Forms.Button()
+        Me.BtnSet509B2Pos = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnSetDiverterSpeed = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txt510B2PosSet = New System.Windows.Forms.TextBox()
+        Me.txt510B1PosSet = New System.Windows.Forms.TextBox()
+        Me.txt509B2PosSet = New System.Windows.Forms.TextBox()
+        Me.txtDiverterSpeedSet = New System.Windows.Forms.TextBox()
+        Me.lblActualPosition_510B2 = New System.Windows.Forms.Label()
+        Me.lblActualPosition_510B1 = New System.Windows.Forms.Label()
+        Me.lblActualPosition_509B2 = New System.Windows.Forms.Label()
+        Me.lbl_ActualSetDiverterSpeed = New System.Windows.Forms.Label()
+        Me.lbl_ActualSetBeltSpeed = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtBeltSpeedSet = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnSetBeltSpeed = New System.Windows.Forms.Button()
         Me.lstBarcodePreview = New System.Windows.Forms.ListView()
         Me.btnPreviewCsv = New System.Windows.Forms.Button()
         Me.btnImportBarcodes = New System.Windows.Forms.Button()
@@ -55,6 +98,17 @@ Partial Class Form1
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.lblFaultW3_10 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_09 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_08 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_07 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_06 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_05 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_04 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_03 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_02 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_01 = New System.Windows.Forms.Label()
+        Me.lblFaultW3_00 = New System.Windows.Forms.Label()
         Me.lblAlarmW1_03 = New System.Windows.Forms.Label()
         Me.lblAlarmW1_02 = New System.Windows.Forms.Label()
         Me.lblAlarmW1_01 = New System.Windows.Forms.Label()
@@ -87,30 +141,15 @@ Partial Class Form1
         Me.lblPlcConnectionStatus = New System.Windows.Forms.Label()
         Me.lblScannerRightStatus = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.ph05 = New System.Windows.Forms.Label()
-        Me.ph06 = New System.Windows.Forms.Label()
-        Me.ph13 = New System.Windows.Forms.Label()
         Me.lblScannerLeftStatus = New System.Windows.Forms.Label()
-        Me.picVicamRightGreen = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.picVicamLeftGreen = New System.Windows.Forms.PictureBox()
-        Me.picVicamLeftRed = New System.Windows.Forms.PictureBox()
-        Me.picVicamRightRed = New System.Windows.Forms.PictureBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
+        CType(Me.picVicamRightRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picVicamLeftRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picVicamLeftGreen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picVicamRightGreen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,9 +162,9 @@ Partial Class Form1
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picVicamLeftGreen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picVicamLeftRed, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picVicamRightRed, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -211,6 +250,54 @@ Partial Class Form1
         Me.TabPage1.Text = "LAYOUT"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'picVicamRightRed
+        '
+        Me.picVicamRightRed.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_RED
+        Me.picVicamRightRed.Location = New System.Drawing.Point(289, 347)
+        Me.picVicamRightRed.Name = "picVicamRightRed"
+        Me.picVicamRightRed.Size = New System.Drawing.Size(45, 46)
+        Me.picVicamRightRed.TabIndex = 43
+        Me.picVicamRightRed.TabStop = False
+        '
+        'picVicamLeftRed
+        '
+        Me.picVicamLeftRed.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_RED
+        Me.picVicamLeftRed.Location = New System.Drawing.Point(289, 293)
+        Me.picVicamLeftRed.Name = "picVicamLeftRed"
+        Me.picVicamLeftRed.Size = New System.Drawing.Size(45, 46)
+        Me.picVicamLeftRed.TabIndex = 42
+        Me.picVicamLeftRed.TabStop = False
+        '
+        'picVicamLeftGreen
+        '
+        Me.picVicamLeftGreen.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_GREEN
+        Me.picVicamLeftGreen.Location = New System.Drawing.Point(289, 294)
+        Me.picVicamLeftGreen.Name = "picVicamLeftGreen"
+        Me.picVicamLeftGreen.Size = New System.Drawing.Size(45, 46)
+        Me.picVicamLeftGreen.TabIndex = 41
+        Me.picVicamLeftGreen.TabStop = False
+        '
+        'picVicamRightGreen
+        '
+        Me.picVicamRightGreen.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_GREEN
+        Me.picVicamRightGreen.Location = New System.Drawing.Point(289, 347)
+        Me.picVicamRightGreen.Name = "picVicamRightGreen"
+        Me.picVicamRightGreen.Size = New System.Drawing.Size(45, 46)
+        Me.picVicamRightGreen.TabIndex = 40
+        Me.picVicamRightGreen.TabStop = False
+        '
+        'ph13
+        '
+        Me.ph13.BackColor = System.Drawing.Color.Lime
+        Me.ph13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ph13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ph13.Location = New System.Drawing.Point(499, 247)
+        Me.ph13.Name = "ph13"
+        Me.ph13.Size = New System.Drawing.Size(44, 18)
+        Me.ph13.TabIndex = 39
+        Me.ph13.Text = "PH-13"
+        Me.ph13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'lblEstop02
         '
         Me.lblEstop02.BackColor = System.Drawing.Color.Red
@@ -275,6 +362,106 @@ Partial Class Form1
         Me.ph08.Text = "PH-08"
         Me.ph08.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
+        Me.PictureBox11.Location = New System.Drawing.Point(695, 333)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(40, 24)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 33
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
+        Me.PictureBox10.Location = New System.Drawing.Point(510, 333)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(40, 24)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox10.TabIndex = 32
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
+        Me.PictureBox9.Location = New System.Drawing.Point(423, 333)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(40, 24)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 31
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
+        Me.PictureBox8.Location = New System.Drawing.Point(331, 333)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(40, 24)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 30
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
+        Me.PictureBox7.Location = New System.Drawing.Point(243, 333)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(40, 24)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 29
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Trident_HMI2.My.Resources.Resources.up30Arrow
+        Me.PictureBox6.Location = New System.Drawing.Point(746, 198)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(40, 31)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 28
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Trident_HMI2.My.Resources.Resources.up30Arrow
+        Me.PictureBox5.Location = New System.Drawing.Point(682, 233)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(40, 31)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 27
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Trident_HMI2.My.Resources.Resources.down30Arrow
+        Me.PictureBox4.Location = New System.Drawing.Point(682, 425)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(40, 31)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 26
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Trident_HMI2.My.Resources.Resources.down30Arrow
+        Me.PictureBox3.Location = New System.Drawing.Point(747, 459)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(40, 31)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 25
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
+        Me.PictureBox2.Location = New System.Drawing.Point(153, 333)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(40, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 24
+        Me.PictureBox2.TabStop = False
+        '
         'ph12
         '
         Me.ph12.BackColor = System.Drawing.Color.Lime
@@ -310,6 +497,30 @@ Partial Class Form1
         Me.ph09.TabIndex = 21
         Me.ph09.Text = "PH-09"
         Me.ph09.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ph06
+        '
+        Me.ph06.BackColor = System.Drawing.Color.Lime
+        Me.ph06.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ph06.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ph06.Location = New System.Drawing.Point(555, 247)
+        Me.ph06.Name = "ph06"
+        Me.ph06.Size = New System.Drawing.Size(44, 18)
+        Me.ph06.TabIndex = 20
+        Me.ph06.Text = "PH-06"
+        Me.ph06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ph05
+        '
+        Me.ph05.BackColor = System.Drawing.Color.Lime
+        Me.ph05.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ph05.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ph05.Location = New System.Drawing.Point(441, 247)
+        Me.ph05.Name = "ph05"
+        Me.ph05.Size = New System.Drawing.Size(44, 18)
+        Me.ph05.TabIndex = 19
+        Me.ph05.Text = "PH-05"
+        Me.ph05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ph04
         '
@@ -417,8 +628,47 @@ Partial Class Form1
         Me.Label1.Text = "1"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Image = Global.Trident_HMI2.My.Resources.Resources.LAYOUT
+        Me.PictureBox1.Location = New System.Drawing.Point(57, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1008, 618)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label17)
+        Me.TabPage2.Controls.Add(Me.Label16)
+        Me.TabPage2.Controls.Add(Me.Label15)
+        Me.TabPage2.Controls.Add(Me.Label14)
+        Me.TabPage2.Controls.Add(Me.Label13)
+        Me.TabPage2.Controls.Add(Me.Label12)
+        Me.TabPage2.Controls.Add(Me.BtnSet510B2Pos)
+        Me.TabPage2.Controls.Add(Me.BtnSet510B1Pos)
+        Me.TabPage2.Controls.Add(Me.BtnSet509B2Pos)
+        Me.TabPage2.Controls.Add(Me.Label11)
+        Me.TabPage2.Controls.Add(Me.btnSetDiverterSpeed)
+        Me.TabPage2.Controls.Add(Me.Label10)
+        Me.TabPage2.Controls.Add(Me.Label9)
+        Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.txt510B2PosSet)
+        Me.TabPage2.Controls.Add(Me.txt510B1PosSet)
+        Me.TabPage2.Controls.Add(Me.txt509B2PosSet)
+        Me.TabPage2.Controls.Add(Me.txtDiverterSpeedSet)
+        Me.TabPage2.Controls.Add(Me.lblActualPosition_510B2)
+        Me.TabPage2.Controls.Add(Me.lblActualPosition_510B1)
+        Me.TabPage2.Controls.Add(Me.lblActualPosition_509B2)
+        Me.TabPage2.Controls.Add(Me.lbl_ActualSetDiverterSpeed)
+        Me.TabPage2.Controls.Add(Me.lbl_ActualSetBeltSpeed)
+        Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.txtBeltSpeedSet)
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.btnSetBeltSpeed)
         Me.TabPage2.Controls.Add(Me.lstBarcodePreview)
         Me.TabPage2.Controls.Add(Me.btnPreviewCsv)
         Me.TabPage2.Controls.Add(Me.btnImportBarcodes)
@@ -434,6 +684,226 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "SETTINGS"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(581, 566)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(23, 13)
+        Me.Label14.TabIndex = 33
+        Me.Label14.Text = "mm"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(581, 519)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(23, 13)
+        Me.Label13.TabIndex = 32
+        Me.Label13.Text = "mm"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(581, 472)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(23, 13)
+        Me.Label12.TabIndex = 31
+        Me.Label12.Text = "mm"
+        '
+        'BtnSet510B2Pos
+        '
+        Me.BtnSet510B2Pos.Location = New System.Drawing.Point(632, 552)
+        Me.BtnSet510B2Pos.Name = "BtnSet510B2Pos"
+        Me.BtnSet510B2Pos.Size = New System.Drawing.Size(71, 41)
+        Me.BtnSet510B2Pos.TabIndex = 30
+        Me.BtnSet510B2Pos.Text = "SET"
+        Me.BtnSet510B2Pos.UseVisualStyleBackColor = True
+        '
+        'BtnSet510B1Pos
+        '
+        Me.BtnSet510B1Pos.Location = New System.Drawing.Point(632, 505)
+        Me.BtnSet510B1Pos.Name = "BtnSet510B1Pos"
+        Me.BtnSet510B1Pos.Size = New System.Drawing.Size(71, 41)
+        Me.BtnSet510B1Pos.TabIndex = 29
+        Me.BtnSet510B1Pos.Text = "SET"
+        Me.BtnSet510B1Pos.UseVisualStyleBackColor = True
+        '
+        'BtnSet509B2Pos
+        '
+        Me.BtnSet509B2Pos.Location = New System.Drawing.Point(632, 458)
+        Me.BtnSet509B2Pos.Name = "BtnSet509B2Pos"
+        Me.BtnSet509B2Pos.Size = New System.Drawing.Size(71, 41)
+        Me.BtnSet509B2Pos.TabIndex = 28
+        Me.BtnSet509B2Pos.Text = "SET"
+        Me.BtnSet509B2Pos.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(581, 416)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(33, 13)
+        Me.Label11.TabIndex = 27
+        Me.Label11.Text = "mm/s"
+        '
+        'btnSetDiverterSpeed
+        '
+        Me.btnSetDiverterSpeed.Location = New System.Drawing.Point(632, 402)
+        Me.btnSetDiverterSpeed.Name = "btnSetDiverterSpeed"
+        Me.btnSetDiverterSpeed.Size = New System.Drawing.Size(71, 41)
+        Me.btnSetDiverterSpeed.TabIndex = 26
+        Me.btnSetDiverterSpeed.Text = "SET"
+        Me.btnSetDiverterSpeed.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(442, 566)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(38, 13)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "510B2"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(442, 519)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(38, 13)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "510B1"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(442, 472)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(38, 13)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "509B2"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(398, 416)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(83, 13)
+        Me.Label7.TabIndex = 22
+        Me.Label7.Text = "Diverters Speed"
+        '
+        'txt510B2PosSet
+        '
+        Me.txt510B2PosSet.Location = New System.Drawing.Point(483, 562)
+        Me.txt510B2PosSet.Name = "txt510B2PosSet"
+        Me.txt510B2PosSet.Size = New System.Drawing.Size(92, 20)
+        Me.txt510B2PosSet.TabIndex = 21
+        Me.txt510B2PosSet.Text = "3300"
+        '
+        'txt510B1PosSet
+        '
+        Me.txt510B1PosSet.Location = New System.Drawing.Point(483, 515)
+        Me.txt510B1PosSet.Name = "txt510B1PosSet"
+        Me.txt510B1PosSet.Size = New System.Drawing.Size(92, 20)
+        Me.txt510B1PosSet.TabIndex = 20
+        Me.txt510B1PosSet.Text = "2370"
+        '
+        'txt509B2PosSet
+        '
+        Me.txt509B2PosSet.Location = New System.Drawing.Point(483, 468)
+        Me.txt509B2PosSet.Name = "txt509B2PosSet"
+        Me.txt509B2PosSet.Size = New System.Drawing.Size(92, 20)
+        Me.txt509B2PosSet.TabIndex = 19
+        Me.txt509B2PosSet.Text = "690"
+        '
+        'txtDiverterSpeedSet
+        '
+        Me.txtDiverterSpeedSet.Location = New System.Drawing.Point(483, 412)
+        Me.txtDiverterSpeedSet.Name = "txtDiverterSpeedSet"
+        Me.txtDiverterSpeedSet.Size = New System.Drawing.Size(92, 20)
+        Me.txtDiverterSpeedSet.TabIndex = 18
+        Me.txtDiverterSpeedSet.Text = "1200"
+        '
+        'lblActualPosition_510B2
+        '
+        Me.lblActualPosition_510B2.AutoSize = True
+        Me.lblActualPosition_510B2.Location = New System.Drawing.Point(722, 566)
+        Me.lblActualPosition_510B2.Name = "lblActualPosition_510B2"
+        Me.lblActualPosition_510B2.Size = New System.Drawing.Size(33, 13)
+        Me.lblActualPosition_510B2.TabIndex = 17
+        Me.lblActualPosition_510B2.Text = "mm/s"
+        '
+        'lblActualPosition_510B1
+        '
+        Me.lblActualPosition_510B1.AutoSize = True
+        Me.lblActualPosition_510B1.Location = New System.Drawing.Point(722, 519)
+        Me.lblActualPosition_510B1.Name = "lblActualPosition_510B1"
+        Me.lblActualPosition_510B1.Size = New System.Drawing.Size(33, 13)
+        Me.lblActualPosition_510B1.TabIndex = 16
+        Me.lblActualPosition_510B1.Text = "mm/s"
+        '
+        'lblActualPosition_509B2
+        '
+        Me.lblActualPosition_509B2.AutoSize = True
+        Me.lblActualPosition_509B2.Location = New System.Drawing.Point(722, 472)
+        Me.lblActualPosition_509B2.Name = "lblActualPosition_509B2"
+        Me.lblActualPosition_509B2.Size = New System.Drawing.Size(33, 13)
+        Me.lblActualPosition_509B2.TabIndex = 15
+        Me.lblActualPosition_509B2.Text = "mm/s"
+        '
+        'lbl_ActualSetDiverterSpeed
+        '
+        Me.lbl_ActualSetDiverterSpeed.AutoSize = True
+        Me.lbl_ActualSetDiverterSpeed.Location = New System.Drawing.Point(722, 416)
+        Me.lbl_ActualSetDiverterSpeed.Name = "lbl_ActualSetDiverterSpeed"
+        Me.lbl_ActualSetDiverterSpeed.Size = New System.Drawing.Size(33, 13)
+        Me.lbl_ActualSetDiverterSpeed.TabIndex = 14
+        Me.lbl_ActualSetDiverterSpeed.Text = "mm/s"
+        '
+        'lbl_ActualSetBeltSpeed
+        '
+        Me.lbl_ActualSetBeltSpeed.AutoSize = True
+        Me.lbl_ActualSetBeltSpeed.Location = New System.Drawing.Point(722, 369)
+        Me.lbl_ActualSetBeltSpeed.Name = "lbl_ActualSetBeltSpeed"
+        Me.lbl_ActualSetBeltSpeed.Size = New System.Drawing.Size(33, 13)
+        Me.lbl_ActualSetBeltSpeed.TabIndex = 13
+        Me.lbl_ActualSetBeltSpeed.Text = "mm/s"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(581, 369)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(33, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "mm/s"
+        '
+        'txtBeltSpeedSet
+        '
+        Me.txtBeltSpeedSet.Location = New System.Drawing.Point(483, 365)
+        Me.txtBeltSpeedSet.Name = "txtBeltSpeedSet"
+        Me.txtBeltSpeedSet.Size = New System.Drawing.Size(92, 20)
+        Me.txtBeltSpeedSet.TabIndex = 11
+        Me.txtBeltSpeedSet.Text = "1200"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(417, 374)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(64, 13)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Belts Speed"
+        '
+        'btnSetBeltSpeed
+        '
+        Me.btnSetBeltSpeed.Location = New System.Drawing.Point(632, 355)
+        Me.btnSetBeltSpeed.Name = "btnSetBeltSpeed"
+        Me.btnSetBeltSpeed.Size = New System.Drawing.Size(71, 41)
+        Me.btnSetBeltSpeed.TabIndex = 9
+        Me.btnSetBeltSpeed.Text = "SET"
+        Me.btnSetBeltSpeed.UseVisualStyleBackColor = True
         '
         'lstBarcodePreview
         '
@@ -508,6 +978,17 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_10)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_09)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_08)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_07)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_06)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_05)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_04)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_03)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_02)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_01)
+        Me.TabPage3.Controls.Add(Me.lblFaultW3_00)
         Me.TabPage3.Controls.Add(Me.lblAlarmW1_03)
         Me.TabPage3.Controls.Add(Me.lblAlarmW1_02)
         Me.TabPage3.Controls.Add(Me.lblAlarmW1_01)
@@ -540,6 +1021,116 @@ Partial Class Form1
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "ALARMS"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'lblFaultW3_10
+        '
+        Me.lblFaultW3_10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_10.Location = New System.Drawing.Point(578, 557)
+        Me.lblFaultW3_10.Name = "lblFaultW3_10"
+        Me.lblFaultW3_10.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_10.TabIndex = 36
+        Me.lblFaultW3_10.Text = "ConveyLinx 222A3 - Communication Fault"
+        Me.lblFaultW3_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_09
+        '
+        Me.lblFaultW3_09.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_09.Location = New System.Drawing.Point(578, 534)
+        Me.lblFaultW3_09.Name = "lblFaultW3_09"
+        Me.lblFaultW3_09.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_09.TabIndex = 35
+        Me.lblFaultW3_09.Text = "ConveyLinx 220A3 - Communication Fault"
+        Me.lblFaultW3_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_08
+        '
+        Me.lblFaultW3_08.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_08.Location = New System.Drawing.Point(578, 511)
+        Me.lblFaultW3_08.Name = "lblFaultW3_08"
+        Me.lblFaultW3_08.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_08.TabIndex = 34
+        Me.lblFaultW3_08.Text = "ConveyLinx 218A3 - Communication Fault"
+        Me.lblFaultW3_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_07
+        '
+        Me.lblFaultW3_07.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_07.Location = New System.Drawing.Point(578, 487)
+        Me.lblFaultW3_07.Name = "lblFaultW3_07"
+        Me.lblFaultW3_07.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_07.TabIndex = 33
+        Me.lblFaultW3_07.Text = "ConveyLinx 216A3 - Communication Fault"
+        Me.lblFaultW3_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_06
+        '
+        Me.lblFaultW3_06.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_06.Location = New System.Drawing.Point(578, 464)
+        Me.lblFaultW3_06.Name = "lblFaultW3_06"
+        Me.lblFaultW3_06.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_06.TabIndex = 32
+        Me.lblFaultW3_06.Text = "ConveyLinx 212A3 - Communication Fault"
+        Me.lblFaultW3_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_05
+        '
+        Me.lblFaultW3_05.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_05.Location = New System.Drawing.Point(578, 441)
+        Me.lblFaultW3_05.Name = "lblFaultW3_05"
+        Me.lblFaultW3_05.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_05.TabIndex = 31
+        Me.lblFaultW3_05.Text = "ConveyLinx 210A3 - Communication Fault"
+        Me.lblFaultW3_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_04
+        '
+        Me.lblFaultW3_04.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_04.Location = New System.Drawing.Point(578, 418)
+        Me.lblFaultW3_04.Name = "lblFaultW3_04"
+        Me.lblFaultW3_04.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_04.TabIndex = 30
+        Me.lblFaultW3_04.Text = "ConveyLinx 208A3 - Communication Fault"
+        Me.lblFaultW3_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_03
+        '
+        Me.lblFaultW3_03.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_03.Location = New System.Drawing.Point(578, 395)
+        Me.lblFaultW3_03.Name = "lblFaultW3_03"
+        Me.lblFaultW3_03.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_03.TabIndex = 29
+        Me.lblFaultW3_03.Text = "ConveyLinx 206A3 - Communication Fault"
+        Me.lblFaultW3_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_02
+        '
+        Me.lblFaultW3_02.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_02.Location = New System.Drawing.Point(578, 372)
+        Me.lblFaultW3_02.Name = "lblFaultW3_02"
+        Me.lblFaultW3_02.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_02.TabIndex = 28
+        Me.lblFaultW3_02.Text = "ConveyLinx 204A3 - Communication Fault"
+        Me.lblFaultW3_02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_01
+        '
+        Me.lblFaultW3_01.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_01.Location = New System.Drawing.Point(578, 349)
+        Me.lblFaultW3_01.Name = "lblFaultW3_01"
+        Me.lblFaultW3_01.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_01.TabIndex = 27
+        Me.lblFaultW3_01.Text = "ConveyLinx 202A3 - Communication Fault"
+        Me.lblFaultW3_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblFaultW3_00
+        '
+        Me.lblFaultW3_00.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFaultW3_00.Location = New System.Drawing.Point(578, 326)
+        Me.lblFaultW3_00.Name = "lblFaultW3_00"
+        Me.lblFaultW3_00.Size = New System.Drawing.Size(478, 23)
+        Me.lblFaultW3_00.TabIndex = 26
+        Me.lblFaultW3_00.Text = "ConveyLinx 200A3 - Communication Fault"
+        Me.lblFaultW3_00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblAlarmW1_03
         '
@@ -848,42 +1439,6 @@ Partial Class Form1
         Me.Button5.Text = "ALARMS / FAULTS"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'ph05
-        '
-        Me.ph05.BackColor = System.Drawing.Color.Lime
-        Me.ph05.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ph05.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ph05.Location = New System.Drawing.Point(441, 247)
-        Me.ph05.Name = "ph05"
-        Me.ph05.Size = New System.Drawing.Size(44, 18)
-        Me.ph05.TabIndex = 19
-        Me.ph05.Text = "PH-05"
-        Me.ph05.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ph06
-        '
-        Me.ph06.BackColor = System.Drawing.Color.Lime
-        Me.ph06.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ph06.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ph06.Location = New System.Drawing.Point(555, 247)
-        Me.ph06.Name = "ph06"
-        Me.ph06.Size = New System.Drawing.Size(44, 18)
-        Me.ph06.TabIndex = 20
-        Me.ph06.Text = "PH-06"
-        Me.ph06.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ph13
-        '
-        Me.ph13.BackColor = System.Drawing.Color.Lime
-        Me.ph13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ph13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ph13.Location = New System.Drawing.Point(499, 247)
-        Me.ph13.Name = "ph13"
-        Me.ph13.Size = New System.Drawing.Size(44, 18)
-        Me.ph13.TabIndex = 39
-        Me.ph13.Text = "PH-13"
-        Me.ph13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'lblScannerLeftStatus
         '
         Me.lblScannerLeftStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -894,152 +1449,32 @@ Partial Class Form1
         Me.lblScannerLeftStatus.Text = "SCANNER"
         Me.lblScannerLeftStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'picVicamRightGreen
+        'Label15
         '
-        Me.picVicamRightGreen.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_GREEN
-        Me.picVicamRightGreen.Location = New System.Drawing.Point(289, 347)
-        Me.picVicamRightGreen.Name = "picVicamRightGreen"
-        Me.picVicamRightGreen.Size = New System.Drawing.Size(45, 46)
-        Me.picVicamRightGreen.TabIndex = 40
-        Me.picVicamRightGreen.TabStop = False
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(486, 452)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(84, 13)
+        Me.Label15.TabIndex = 34
+        Me.Label15.Text = "Default: 690 mm"
         '
-        'PictureBox11
+        'Label16
         '
-        Me.PictureBox11.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
-        Me.PictureBox11.Location = New System.Drawing.Point(695, 333)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(40, 24)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox11.TabIndex = 33
-        Me.PictureBox11.TabStop = False
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(486, 501)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(90, 13)
+        Me.Label16.TabIndex = 35
+        Me.Label16.Text = "Default: 2370 mm"
         '
-        'PictureBox10
+        'Label17
         '
-        Me.PictureBox10.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
-        Me.PictureBox10.Location = New System.Drawing.Point(510, 333)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(40, 24)
-        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox10.TabIndex = 32
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
-        Me.PictureBox9.Location = New System.Drawing.Point(423, 333)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(40, 24)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 31
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
-        Me.PictureBox8.Location = New System.Drawing.Point(331, 333)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(40, 24)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 30
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
-        Me.PictureBox7.Location = New System.Drawing.Point(243, 333)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(40, 24)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 29
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.Trident_HMI2.My.Resources.Resources.up30Arrow
-        Me.PictureBox6.Location = New System.Drawing.Point(746, 198)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(40, 31)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 28
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Trident_HMI2.My.Resources.Resources.up30Arrow
-        Me.PictureBox5.Location = New System.Drawing.Point(682, 233)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(40, 31)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 27
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Trident_HMI2.My.Resources.Resources.down30Arrow
-        Me.PictureBox4.Location = New System.Drawing.Point(682, 425)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(40, 31)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 26
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Trident_HMI2.My.Resources.Resources.down30Arrow
-        Me.PictureBox3.Location = New System.Drawing.Point(747, 459)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(40, 31)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 25
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Trident_HMI2.My.Resources.Resources.rightArrow
-        Me.PictureBox2.Location = New System.Drawing.Point(153, 333)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(40, 24)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 24
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Image = Global.Trident_HMI2.My.Resources.Resources.LAYOUT
-        Me.PictureBox1.Location = New System.Drawing.Point(57, 36)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1008, 618)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'picVicamLeftGreen
-        '
-        Me.picVicamLeftGreen.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_GREEN
-        Me.picVicamLeftGreen.Location = New System.Drawing.Point(289, 294)
-        Me.picVicamLeftGreen.Name = "picVicamLeftGreen"
-        Me.picVicamLeftGreen.Size = New System.Drawing.Size(45, 46)
-        Me.picVicamLeftGreen.TabIndex = 41
-        Me.picVicamLeftGreen.TabStop = False
-        '
-        'picVicamLeftRed
-        '
-        Me.picVicamLeftRed.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_RED
-        Me.picVicamLeftRed.Location = New System.Drawing.Point(289, 293)
-        Me.picVicamLeftRed.Name = "picVicamLeftRed"
-        Me.picVicamLeftRed.Size = New System.Drawing.Size(45, 46)
-        Me.picVicamLeftRed.TabIndex = 42
-        Me.picVicamLeftRed.TabStop = False
-        '
-        'picVicamRightRed
-        '
-        Me.picVicamRightRed.Image = Global.Trident_HMI2.My.Resources.Resources.VICAM_RED
-        Me.picVicamRightRed.Location = New System.Drawing.Point(289, 347)
-        Me.picVicamRightRed.Name = "picVicamRightRed"
-        Me.picVicamRightRed.Size = New System.Drawing.Size(45, 46)
-        Me.picVicamRightRed.TabIndex = 43
-        Me.picVicamRightRed.TabStop = False
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(486, 548)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(90, 13)
+        Me.Label17.TabIndex = 36
+        Me.Label17.Text = "Default: 3300 mm"
         '
         'Form1
         '
@@ -1059,10 +1494,9 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
+        CType(Me.picVicamRightRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picVicamLeftRed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picVicamLeftGreen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picVicamRightGreen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1075,9 +1509,10 @@ Partial Class Form1
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picVicamLeftGreen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picVicamLeftRed, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picVicamRightRed, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1165,4 +1600,43 @@ Partial Class Form1
     Friend WithEvents picVicamRightRed As PictureBox
     Friend WithEvents picVicamLeftRed As PictureBox
     Friend WithEvents picVicamLeftGreen As PictureBox
+    Friend WithEvents lblFaultW3_10 As Label
+    Friend WithEvents lblFaultW3_09 As Label
+    Friend WithEvents lblFaultW3_08 As Label
+    Friend WithEvents lblFaultW3_07 As Label
+    Friend WithEvents lblFaultW3_06 As Label
+    Friend WithEvents lblFaultW3_05 As Label
+    Friend WithEvents lblFaultW3_04 As Label
+    Friend WithEvents lblFaultW3_03 As Label
+    Friend WithEvents lblFaultW3_02 As Label
+    Friend WithEvents lblFaultW3_01 As Label
+    Friend WithEvents lblFaultW3_00 As Label
+    Friend WithEvents txtBeltSpeedSet As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btnSetBeltSpeed As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents lblActualPosition_510B2 As Label
+    Friend WithEvents lblActualPosition_510B1 As Label
+    Friend WithEvents lblActualPosition_509B2 As Label
+    Friend WithEvents lbl_ActualSetDiverterSpeed As Label
+    Friend WithEvents lbl_ActualSetBeltSpeed As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents BtnSet510B2Pos As Button
+    Friend WithEvents BtnSet510B1Pos As Button
+    Friend WithEvents BtnSet509B2Pos As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents btnSetDiverterSpeed As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txt510B2PosSet As TextBox
+    Friend WithEvents txt510B1PosSet As TextBox
+    Friend WithEvents txt509B2PosSet As TextBox
+    Friend WithEvents txtDiverterSpeedSet As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
 End Class

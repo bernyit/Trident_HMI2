@@ -48,11 +48,11 @@
         Dim measureInt29 As Int16
         Dim measureInt30 As Int16
 
-        Dim MeasureReal1 As Decimal
-        Dim MeasureReal2 As Decimal
-        Dim MeasureReal3 As Decimal
-        Dim MeasureReal4 As Decimal
-        Dim MeasureReal5 As Decimal
+        Dim SetBeltSpeed As Decimal
+        Dim SetDiverterSpeed As Decimal
+        Dim Position_509B2 As Decimal
+        Dim Position_510B1 As Decimal
+        Dim Position_510B2 As Decimal
         Dim MeasureReal6 As Decimal
         Dim MeasureReal7 As Decimal
         Dim MeasureReal8 As Decimal
@@ -83,8 +83,8 @@
         Dim triggers As strTrig
         Dim faultW1 As strBit
         Dim faultW2 As strBit
+        Dim faultW3 As strBit
         Dim alarmW1 As strBit
-        Dim measureWord6 As UInt16
         Dim statusW1 As strBit
         Dim measureWord8 As UInt16
         Dim measureWord9 As UInt16
@@ -265,5 +265,12 @@
         Return retVal
     End Function
 
+    Enum enuPlcCommands
+        SetBeltSpeed = 1
+        SetDiverterSpeed = 2
+        Set509B1Pos = 3
+        Set510B1Pos = 4
+        Set510B2Pos = 5
+    End Enum
 
 End Module

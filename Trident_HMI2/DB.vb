@@ -150,11 +150,11 @@ Public Class DB
 
 
 
-                        hmiData.MeasureReal1 = rd.GetFloat(30)
-                        hmiData.MeasureReal2 = rd.GetFloat(31)
-                        hmiData.MeasureReal3 = rd.GetFloat(32)
-                        hmiData.MeasureReal4 = rd.GetFloat(33)
-                        hmiData.MeasureReal5 = rd.GetFloat(34)
+                        hmiData.SetBeltSpeed = rd.GetFloat(30)
+                        hmiData.SetDiverterSpeed = rd.GetFloat(31)
+                        hmiData.Position_509B2 = rd.GetFloat(32)
+                        hmiData.Position_510B1 = rd.GetFloat(33)
+                        hmiData.Position_510B2 = rd.GetFloat(34)
                         hmiData.MeasureReal6 = rd.GetFloat(35)
                         hmiData.MeasureReal7 = rd.GetFloat(36)
                         hmiData.MeasureReal8 = rd.GetFloat(37)
@@ -185,8 +185,8 @@ Public Class DB
                         hmiData.triggers = GlobalVariables.intToStrTrig(rd.GetUInt16(61))
                         hmiData.faultW1 = GlobalVariables.wordToBit(rd.GetUInt16(62))
                         hmiData.faultW2 = GlobalVariables.wordToBit(rd.GetUInt16(63))
-                        hmiData.alarmW1 = GlobalVariables.wordToBit(rd.GetUInt16(64))
-                        hmiData.measureWord6 = rd.GetUInt16(65)
+                        hmiData.faultW3 = GlobalVariables.wordToBit(rd.GetUInt16(64))
+                        hmiData.alarmW1 = GlobalVariables.wordToBit(rd.GetUInt16(65))
                         hmiData.statusW1 = GlobalVariables.wordToBit(rd.GetUInt16(66))
                         hmiData.measureWord8 = rd.GetUInt16(67)
                         hmiData.measureWord9 = rd.GetUInt16(68)
@@ -350,5 +350,42 @@ Public Class DB
         GlobalVariables.scannerConnectionStatus = scannerStatus
 
     End Sub
+
+
+
+#Region " PLC COMMANDS "
+
+    Public Shared Sub PLC_Cmd_SetPlcValue(ByVal cmd As enuPlcCommands, ByVal speed As String)
+
+        Try
+            SyncLock DBobjLock
+                Dim SQLConnection As MySqlConnection = New MySqlConnection(connectionString)
+                Dim sqlCommand As New MySqlCommand
+                Dim str_carSql As String
+                Try
+                    SQLConnection.Open()
+                    str_carSql = "insert into plcCommands (commandID, CommandValue, commandTime) values (" _
+                    & cmd & "," _
+                    & speed & "," _
+                    & "now());"
+
+                    sqlCommand.Connection = SQLConnection
+                    sqlCommand.CommandText = str_carSql
+                    sqlCommand.ExecuteNonQuery()
+                Catch ex As Exception
+
+                Finally
+                    SQLConnection.Close()
+                End Try
+
+            End SyncLock
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+
+#End Region
 
 End Class

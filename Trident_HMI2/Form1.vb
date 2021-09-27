@@ -27,7 +27,7 @@
             updateTriggerInfo()
             updateConnectionStatus()
             updateFaultsAndAlarms()
-
+            updateSettings()
         Catch ex As Exception
 
         End Try
@@ -81,7 +81,14 @@
         lblEstop04.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit05 = 0 And Now.Second Mod 2 = 0, NotOkColor, OkColor)
     End Sub
 
+    Private Sub updateSettings()
+        lbl_ActualSetBeltSpeed.Text = (GlobalVariables.hmiData.SetBeltSpeed * 1000) & " mm/s"
+        lbl_ActualSetDiverterSpeed.Text = (GlobalVariables.hmiData.SetDiverterSpeed * 1000) & " mm/s"
 
+        lblActualPosition_509B2.Text = (GlobalVariables.hmiData.Position_509B2 * 1000).ToString("0") & " mm"
+        lblActualPosition_510B1.Text = (GlobalVariables.hmiData.Position_510B1 * 1000).ToString("0") & " mm"
+        lblActualPosition_510B2.Text = (GlobalVariables.hmiData.Position_510B2 * 1000).ToString("0") & " mm"
+    End Sub
     Private Sub updateTriggerInfo()
         lblParcelID_PH01.Text = GlobalVariables.hmiData.PH01_Parcel_ID
         If GlobalVariables.hmiData.triggers.newParcelOnPH01 Then
@@ -210,6 +217,20 @@
         lblFaultW2_04.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit04, faultOkColor, faultNotOkColor)
         lblFaultW2_05.BackColor = IIf(GlobalVariables.hmiData.faultW2.bit05, faultOkColor, faultNotOkColor)
 
+
+        lblFaultW3_00.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit00, faultOkColor, faultNotOkColor)
+        lblFaultW3_01.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit01, faultOkColor, faultNotOkColor)
+        lblFaultW3_02.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit02, faultOkColor, faultNotOkColor)
+        lblFaultW3_03.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit03, faultOkColor, faultNotOkColor)
+        lblFaultW3_04.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit04, faultOkColor, faultNotOkColor)
+        lblFaultW3_05.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit05, faultOkColor, faultNotOkColor)
+        lblFaultW3_06.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit06, faultOkColor, faultNotOkColor)
+        lblFaultW3_07.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit07, faultOkColor, faultNotOkColor)
+        lblFaultW3_08.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit08, faultOkColor, faultNotOkColor)
+        lblFaultW3_09.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit09, faultOkColor, faultNotOkColor)
+        lblFaultW3_10.BackColor = IIf(GlobalVariables.hmiData.faultW3.bit10, faultOkColor, faultNotOkColor)
+
+
         lblAlarmW1_00.BackColor = IIf(GlobalVariables.hmiData.alarmW1.bit00, alarmOkColor, alarmNotOkColor)
         lblAlarmW1_01.BackColor = IIf(GlobalVariables.hmiData.alarmW1.bit01, alarmOkColor, alarmNotOkColor)
         lblAlarmW1_02.BackColor = IIf(GlobalVariables.hmiData.alarmW1.bit02, alarmOkColor, alarmNotOkColor)
@@ -241,5 +262,100 @@
             Button5.BackColor = Color.LightGray
         End If
 
+    End Sub
+
+    Private Sub btnSetBeltSpeed_Click(sender As Object, e As EventArgs) Handles btnSetBeltSpeed.Click
+        Try
+
+            Dim txtVal As String
+
+            txtVal = txtBeltSpeedSet.Text
+
+            DB.PLC_Cmd_SetPlcValue(GlobalVariables.enuPlcCommands.SetBeltSpeed, txtVal)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+    End Sub
+
+    Private Sub txtBeltSpeedSet_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBeltSpeedSet.KeyPress
+        Dim DecimalSeparator As String = "." 'Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+        e.Handled = Not (Char.IsDigit(e.KeyChar) Or
+        8 Or
+        (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    End Sub
+
+    Private Sub txtDiverterSpeedSet_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDiverterSpeedSet.KeyPress
+        Dim DecimalSeparator As String = "." 'Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+        e.Handled = Not (Char.IsDigit(e.KeyChar) Or
+        8 Or
+        (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    End Sub
+
+    Private Sub txt509B2PosSet_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt509B2PosSet.KeyPress
+        e.Handled = Not (Char.IsDigit(e.KeyChar))
+    End Sub
+
+    Private Sub txt510B1PosSet_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt510B1PosSet.KeyPress
+        e.Handled = Not (Char.IsDigit(e.KeyChar))
+    End Sub
+
+    Private Sub txt510B2PosSet_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt510B2PosSet.KeyPress
+        e.Handled = Not (Char.IsDigit(e.KeyChar))
+    End Sub
+
+    Private Sub btnSetDiverterSpeed_Click(sender As Object, e As EventArgs) Handles btnSetDiverterSpeed.Click
+        Try
+
+            Dim txtVal As String
+
+            txtVal = txtDiverterSpeedSet.Text
+
+            DB.PLC_Cmd_SetPlcValue(GlobalVariables.enuPlcCommands.SetDiverterSpeed, txtVal)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+    End Sub
+
+    Private Sub BtnSet509B2Pos_Click(sender As Object, e As EventArgs) Handles BtnSet509B2Pos.Click
+        Try
+
+            Dim txtVal As String
+
+            txtVal = txt509B2PosSet.Text
+
+            DB.PLC_Cmd_SetPlcValue(GlobalVariables.enuPlcCommands.Set509B1Pos, txtVal)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+    End Sub
+
+    Private Sub BtnSet510B1Pos_Click(sender As Object, e As EventArgs) Handles BtnSet510B1Pos.Click
+        Try
+
+            Dim txtVal As String
+
+            txtVal = txt510B1PosSet.Text
+
+            DB.PLC_Cmd_SetPlcValue(GlobalVariables.enuPlcCommands.Set510B1Pos, txtVal)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+    End Sub
+    Private Sub BtnSet510B2Pos_Click(sender As Object, e As EventArgs) Handles BtnSet510B2Pos.Click
+        Try
+
+            Dim txtVal As String
+
+            txtVal = txt510B2PosSet.Text
+
+            DB.PLC_Cmd_SetPlcValue(GlobalVariables.enuPlcCommands.Set510B2Pos, txtVal)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
     End Sub
 End Class
